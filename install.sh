@@ -52,3 +52,4 @@ xfconf-query -c xfwm4 -p /general/theme -s "adw-gtk3"
 mkdir -p /etc/skel/.config
 sudo cp -r ~/.config/xfce4 /etc/skel/.config/
 sudo pacstall -I alacritty
+exo-preferred-applications --set TerminalEmulator alacritty.desktop
