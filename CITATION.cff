@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: DevelopOS
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name: jrf-g
+  - name: JTech6
+repository-code: 'https://github.com/jrf-g/develop-os/'
+keywords:
+  - installer
+  - operating-system
+  - system-customization
+license: MIT
+commit: 19f0056
+version: '16'
+date-released: '2026-06-13'
