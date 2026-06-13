@@ -40,16 +40,15 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-title -s "DevelopOS" 2>/
 sudo sed -i 's/Linux Mint/DevelopOS/g' /etc/default/grub 2>/dev/null || true
 sudo update-grub 2>/dev/null || true
 sudo hostnamectl set-hostname developos
-sudo reboot
-sudo dpkg -i
 curl https://github.com/pacstall/pacstall/releases/download/4.1.0/pacstall-4.1.0.deb -o pacstall.deb
 sudo dpkg -i pacstall.deb
-sudo apt install -f
+sudo apt install -f -y
 sudo touch /etc/skel/about-your-computer
-echo "DevelopOS, based on Mint"
+echo "DevelopOS, based on Mint" | sudo tee /etc/skel/about-your-computer
 pacstall -I adw-gtk-theme
 xfconf-query -c xsettings -p /Net/ThemeName -s "adw-gtk3"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Mint-Y"
 xfconf-query -c xfwm4 -p /general/theme -s "adw-gtk3"
+mkdir -p /etc/skel/.config
 sudo cp -r ~/.config/xfce4 /etc/skel/.config/
-pacstall -I alacritty
+sudo pacstall -I alacritty
