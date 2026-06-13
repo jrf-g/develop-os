@@ -2,5 +2,8 @@
 
 == Policy
 WARNING: IF YOUR EDIT IS POTENTIAL MALWARE WE WILL BLOCK YOU
+== Contributing
+[.lead]
+to generally contribute, submit an issue with code attached
 == Contributing packages
 to request your linux package to be installed along with DevelopOS, create an issue marked "enhancement" stating the package name
