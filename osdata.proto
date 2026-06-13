@@ -1,0 +1,14 @@
+enum Storage {
+  UNIT_UNSPECIFIED = 0;
+  UNIT_KB = 1;
+  UNIT_MB = 2;
+  UNIT_GB = 3;
+  UNIT_TB = 4;
+}
+message Operatingsystem {
+  string lsbname = 1;
+  string osname = 2;
+  int64 diskspaceremaining = 3;
+  optional Storage diskspaceunit = 4;
+  repeated friendlyname = 5;
+}
