@@ -1,2 +1,2 @@
 *.out linguist-generated
-*.proto linguist-detectable
+*.proto linguist-language=Protobuf
