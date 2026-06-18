@@ -1,8 +1,8 @@
-my $slide = <<EOF;
+my $slide = <<EOC;
 $$%%##############################%%$$
 # Develop                            #
 #        OS                          #
 #          the future of development #
 $$%%##############################%%$$
-EOF
+EOC
 print "$slide \n"
