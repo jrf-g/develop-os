@@ -1,23 +1,17 @@
 #include <stdio.h>
-#include <termios.h>
 #include <unistd.h>
-
-char getch() {
-    char c;
-    struct termios old, new;
-
-    tcgetattr(STDIN_FILENO, &old);
-    new = old;
-    new.c_lflag &= ~(ICANON | ECHO);
-    tcsetattr(STDIN_FILENO, TCSANOW, &new);
-
-    read(STDIN_FILENO, &c, 1);
-
-    tcsetattr(STDIN_FILENO, TCSANOW, &old);
-    return c;
-}
+#include <sys/socket.h>
+#include <string.h>
 
 int main() {
-    char c = getch();
-    printf("%c", c);
+    int fd = 3;  // systemd passes the socket as FD 3
+
+    char buf[1024];
+    ssize_t n;
+
+    while ((n = read(fd, buf, sizeof(buf))) > 0) {
+        write(fd, buf, n);   // echo back
+    }
+
+    return 0;
 }
