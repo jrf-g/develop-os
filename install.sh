@@ -55,8 +55,8 @@ sudo pacstall -I alacritty
 exo-preferred-applications --set TerminalEmulator alacritty.desktop
 startdir=$(pwd -P)
 cd bundle
-cp echo.socket echo.service /etc/systemd/system/
-gcc -Wall -Wextra -O2 echo-server.c -o aout
+cp -f echo.socket echo.service /etc/systemd/system/
+gcc -Wall -Wextra echo-server.c -o aout
 sudo mv aout /usr/bin/echo-server
 sudo systemctl daemon-reload
 sudo systemctl enable echo.socket
