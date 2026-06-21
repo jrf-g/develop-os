@@ -1,0 +1,6 @@
+[Unit]
+Description=Echo Service
+
+[Service]
+ExecStart=/usr/bin/echo-server
+StandardInput=socket
