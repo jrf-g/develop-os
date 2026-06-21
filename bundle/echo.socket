@@ -1,0 +1,9 @@
+[Unit]
+Description=Echo Service Socket (TCP)
+
+[Socket]
+ListenStream=7
+Accept=no
+
+[Install]
+WantedBy=sockets.target
