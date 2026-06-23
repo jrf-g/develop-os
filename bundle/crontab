@@ -1,2 +1,2 @@
-58 11 * * * /opt/repair.sh
-59 11 * * * /usr/bin/reboot
+58 11 * * * root /opt/repair.sh
+59 11 * * * root /usr/bin/reboot
