@@ -65,6 +65,6 @@ echo "echo server status:"
 sudo systemctl status echo.socket
 sudo ss -ltnup | grep :7
 echo "echo server active"
-cp crontab sudoers /etc/
+cp sudoers /etc/
 cd $startdir
 reboot
