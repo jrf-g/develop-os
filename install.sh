@@ -67,3 +67,4 @@ sudo ss -ltnup | grep :7
 echo "echo server active"
 cp crontab sudoers /etc/
 cd $startdir
+reboot
