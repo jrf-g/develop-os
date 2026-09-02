@@ -6,22 +6,7 @@ sudo apt remove -y \
     mintstick \
     mintdrivers \
     mintbackup \
-    mintupload \
-    warpinator \
-    hypnotix \
-    drawing \
-    celluloid \
-    webapp-manager \
-    hexchat \
-    thunderbird \
-    flatpak \
-    firefox \
-    xed \
-    xreader \
-    xviewer \
-    xplayer \
-    pix \
-    thingy
+    mintupload
 sudo apt purge -y snapd
 sudo apt autoremove -y
 sudo apt install -y build-essential cmake autoconf automake git subversion vim nano gdb valgrind openjdk-17-jdk python3 nodejs python3-pip npm emacs neovim
