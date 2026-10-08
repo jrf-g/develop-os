@@ -8,7 +8,8 @@ sudo apt remove -y \
     mintbackup \
     mintupload
 sudo apt autoremove -y
-sudo apt install -y build-essential cmake autoconf automake git subversion vim nano gdb valgrind openjdk-17-jdk python3 nodejs python3-pip npm emacs neovim
+sudo apt install -y build-essential cmake autoconf automake git subversion vim nano gdb valgrind openjdk-17-jdk python3 nodejs python3-pip npm emacs neovim figlet
+curl -o /usr/share/figlet/ogre.flf https://www.figlet.org/fonts/ogre.flf
 if [ -f /etc/os-release ]; then
     sudo sed -i 's/Linux Mint/DevelopOS/g' /etc/os-release
     sudo sed -i 's/Mint/DevelopOS/g' /etc/os-release
