@@ -39,6 +39,8 @@ sudo pacstall -I alacritty
 exo-preferred-applications --set TerminalEmulator alacritty.desktop
 startdir=$(pwd -P)
 cd bundle
+cp /etc/skel/.bashrc /etc/skel/.bashrc.bak
+cat .append-to-bashrc >> /etc/skel/.bashrc
 cp -f echo.socket echo.service /etc/systemd/system/
 gcc -Wall -Wextra echo-server.c -o aout
 sudo mv aout /usr/bin/echo-server
