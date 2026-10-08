@@ -1,1 +1,2 @@
 PS1="[\t]=\!-\#:\u@\H-\l-\s-\V:\w&bg:\j\n\$"
+figlet -f ogre "Develop"
