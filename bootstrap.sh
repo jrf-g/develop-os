@@ -1,2 +1,3 @@
-nohup bash install.sh &
+bash install.sh
 perl slide.pl
+echo "Done!"
