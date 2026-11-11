@@ -42,16 +42,6 @@ startdir=$(pwd -P)
 cd bundle
 cp /etc/skel/.bashrc /etc/skel/.bashrc.bak
 cat .append-to-bashrc >> /etc/skel/.bashrc
-cp -f echo.socket echo.service /etc/systemd/system/
-gcc -Wall -Wextra echo-server.c -o aout
-sudo mv aout /usr/bin/echo-server
-sudo systemctl daemon-reload
-sudo systemctl enable echo.socket
-sudo systemctl start echo.socket
-echo "echo server status:"
-sudo systemctl status echo.socket
-sudo ss -ltnup | grep :7
-echo "echo server active"
 cp sudoers /etc/
 cd $startdir
 reboot
